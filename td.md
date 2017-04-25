@@ -6,9 +6,11 @@
     1.2通过ready处理成功验证
         页面加载时调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行
         ```
+        
         tMobileSDK.ready = function(func){
             td.ready(func)
         };
+        
         ```
     1.3接口调用说明
         onSuccess接口调用成功时执行的回调函数
