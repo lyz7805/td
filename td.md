@@ -4,14 +4,19 @@
     
     1.0概述
     
-        产品使用td_sdk的模块，同一套代码运行在四个客户端里，每个模块页面均包含 pda/header.php。
         
+        产品使用td_sdk的模块，同一套代码运行在四个客户端里，每个模块页面均包含 pda/header.php。
+        
+        
         头文件：
         
+        
         header_dd.php,header_client.php,header_wx.php,header_common.php
+        
         
         打包文件：
         
+        
         /static/pack/mobile/js/client.js
         
         /static/pack/mobile/js/common.js
@@ -20,55 +25,103 @@
         
         /static/pack/mobile/js/dd.js
         
+        
        打包文件与源文件的映射关系：
         
+        
         "/static/pack/mobile/js/wx.js": [
+        
             "/static/mobile/js/zepto.min.js",
+            
             "/static/mobile/js/gmu/gmu.js",
+            
             "/static/mobile/js/gmu/list.js",
+            
             "/static/mobile/js/gmu/page.js",
+            
             "/static/mobile/js/frozen/frozen.js",
+            
             "/static/mobile/js/swiped/swiped.js",
+            
             "/static/mobile/js/routie.min.js",
+            
             "/static/mobile/js/sdk.js",
+            
             "/pda/js/jweixin-1.0.0.js",
+            
             "/static/mobile/js/sdk/wx_sdk.js"
-        ]
-        "/static/pack/mobile/js/dd.js": [
+       
+       ]
+       
+       "/static/pack/mobile/js/dd.js": [
+            
             "/static/mobile/js/zepto.min.js",
+            
             "/static/mobile/js/gmu/gmu.js",
+            
             "/static/mobile/js/gmu/list.js",
+            
             "/static/mobile/js/gmu/page.js",
+            
             "/static/mobile/js/frozen/frozen.js",
+            
             "/static/mobile/js/swiped/swiped.js",
+            
             "/static/mobile/js/routie.min.js",
+            
             "/static/mobile/js/sdk.js",
+            
             "/static/mobile/js/sdk/dd_sdk.js"
-        ]
-        "/static/pack/mobile/js/common.js": [
-            "/static/mobile/js/zepto.min.js",
-            "/static/mobile/js/gmu/gmu.js",
-            "/static/mobile/js/gmu/list.js",
-            "/static/mobile/js/gmu/page.js",
-            "/static/mobile/js/frozen/frozen.js",
-            "/static/mobile/js/swiped/swiped.js",
-            "/static/mobile/js/routie.min.js",
-            "/static/mobile/js/sdk.js",
-            "/static/mobile/js/sdk/h5_sdk.js"
-        ]
-        "/static/pack/mobile/js/client.js": [
-            "/static/mobile/js/zepto.min.js",
-            "/static/mobile/js/gmu/gmu.js",
-            "/static/mobile/js/gmu/list.js",
-            "/static/mobile/js/gmu/page.js",
-            "/static/mobile/js/frozen/frozen.js",
-            "/static/mobile/js/swiped/swiped.js",
-            "/static/mobile/js/routie.min.js",
-            "/static/mobile/js/sdk.js",
-            "/static/mobile/js/sdk/client_sdk.js"
+        
         ]
         
+        "/static/pack/mobile/js/common.js": [
+            
+            "/static/mobile/js/zepto.min.js",
+            
+            "/static/mobile/js/gmu/gmu.js",
+            
+            "/static/mobile/js/gmu/list.js",
+            
+            "/static/mobile/js/gmu/page.js",
+            
+            "/static/mobile/js/frozen/frozen.js",
+            
+            "/static/mobile/js/swiped/swiped.js",
+            
+            "/static/mobile/js/routie.min.js",
+            
+            "/static/mobile/js/sdk.js",
+            
+            "/static/mobile/js/sdk/h5_sdk.js"
+        
+        ]
+        
+        "/static/pack/mobile/js/client.js": [
+            
+            "/static/mobile/js/zepto.min.js",
+            
+            "/static/mobile/js/gmu/gmu.js",
+            
+            "/static/mobile/js/gmu/list.js",
+            
+            "/static/mobile/js/gmu/page.js",
+            
+            "/static/mobile/js/frozen/frozen.js",
+            
+            "/static/mobile/js/swiped/swiped.js",
+            
+            "/static/mobile/js/routie.min.js",
+            
+            "/static/mobile/js/sdk.js",
+            
+            "/static/mobile/js/sdk/client_sdk.js"
+        
+        ]
+        
+        
         页面在不同平台下，引入对应的js文件，最终均提供一个全局对象tMobileSDK，对象tMobileSDK负责统一不同平台提供的功能接口，如上传图片，选人等等。例如选择附件功能，钉钉提供方法dd.selectFile，客户端提供方法td.selectFile，经tMobileSDK封装后，在业务代码中，研发人员仅需要使用tMobileSDK.selectFile即可，无须考虑代码在哪个客户端运行。
+        
        
     1.1引入js文件
         
