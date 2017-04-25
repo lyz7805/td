@@ -8,10 +8,7 @@
         产品使用td_sdk的模块，同一套代码运行在四个客户端里，每个模块页面均包含 pda/header.php。
         
         
-        头文件：
-        
-        
-        header_dd.php,header_client.php,header_wx.php,header_common.php
+        头文件：header_dd.php,header_client.php,header_wx.php,header_common.php
         
         
         打包文件：
