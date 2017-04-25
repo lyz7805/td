@@ -10,11 +10,13 @@
         
         头文件：header_dd.php,header_client.php,header_wx.php,header_common.php
         
-        
+
         打包文件：
         
         
+        
         /static/pack/mobile/js/client.js
+        
         /static/pack/mobile/js/common.js
         
         /static/pack/mobile/js/wx.js
@@ -25,7 +27,9 @@
        打包文件与源文件的映射关系：
         
         
+        
         "/static/pack/mobile/js/wx.js": [
+        
         
             "/static/mobile/js/zepto.min.js",
             
