@@ -2,27 +2,16 @@
 
 ### 1、td_sdk使用步骤
 #### 1.0概述
-    
         产品使用td_sdk的模块，同一套代码运行在四个客户端里，每个模块页面均包含 pda/header.php。
-        
-        头文件：header_dd.php,header_client.php,header_wx.php,header_common.php
-       
-        打包文件：
-
+###### 头文件：
+        header_dd.php,header_client.php,header_wx.php,header_common.php
+###### 打包文件：
         /static/pack/mobile/js/client.js
-        
         /static/pack/mobile/js/common.js
-        
         /static/pack/mobile/js/wx.js
-        
         /static/pack/mobile/js/dd.js
-        
-
-       打包文件与源文件的映射关系：
-        
+###### 打包文件与源文件的映射关系：
         "/static/pack/mobile/js/wx.js": [
-        
-        
             "/static/mobile/js/zepto.min.js",
             
             "/static/mobile/js/gmu/gmu.js",
@@ -113,24 +102,21 @@
         
         页面在不同平台下，引入对应的js文件，最终均提供一个全局对象tMobileSDK，对象tMobileSDK负责统一不同平台提供的功能接口，如上传图片，选人等等。例如选择附件功能，钉钉提供方法dd.selectFile，客户端提供方法td.selectFile，经tMobileSDK封装后，在业务代码中，研发人员仅需要使用tMobileSDK.selectFile即可，无须考虑代码在哪个客户端运行。
         
-       
-    #### 1.1引入js文件
+#### 1.1引入js文件
         
         以客户端为例：
         
         /static/mobile/js/td.js
         /static/pack/mobile/js/client.js
         
-        
-    
-    #### 1.2通过ready处理成功验证
+#### 1.2通过ready处理成功验证
         
         页面加载时调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行
         tMobileSDK.ready = function(func){
             td.ready(func)
         };
         
-    #### 1.3接口调用说明
+#### 1.3接口调用说明
         
         onSuccess接口调用成功时执行的回调函数
         onFail接口调用失败时执行的回调函数
