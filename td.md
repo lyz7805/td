@@ -140,14 +140,14 @@
         onSuccess接口调用成功时执行的回调函数
         onFail接口调用失败时执行的回调函数
 
-###2、暴露的全局对象 tMobileSDK 
+### 2、暴露的全局对象 tMobileSDK 
 ```
 
 tMobileSDK = window.tMobileSDK || {};
 
 ```
 
-###3、确认弹窗
+### 3、确认弹窗
 ```
 tMobileSDK.confirm = function(opts) {
 
@@ -167,7 +167,7 @@ tMobileSDK.confirm = function(opts) {
 
 }
 ```
-4、顶部提示条
+### 4、顶部提示条
 ```
 tMobileSDK.toast = function(opts) {
 
@@ -187,7 +187,7 @@ tMobileSDK.toast = function(opts) {
 
 }
 ```
-5、定位
+### 5、定位
 ```
 /*
 onSuccess获取成功回调，返回值result是位置信息
@@ -206,7 +206,7 @@ tMobileSDK.getLocation = function(opts) {
 }
 ```
 
-6、开启其它的应用
+### 6、开启其它的应用
 
 ```
 tMobileSDK.launchApp = function(opts) {
@@ -223,7 +223,7 @@ tMobileSDK.launchApp = function(opts) {
 
 }
 ```
-7、选人
+### 7、选人
 ```
 tMobileSDK.selectUser = function(opts) {
 
@@ -237,7 +237,7 @@ tMobileSDK.selectUser = function(opts) {
 
 }
 ```
-8、选部门
+### 8、选部门
 ```
 tMobileSDK.selectDept = function(opts) {
 
@@ -252,7 +252,7 @@ tMobileSDK.selectDept = function(opts) {
 }
 ```
 
-9、打电话
+### 9、打电话
 ```
 tMobileSDK.call = function(opts) {
 
@@ -268,7 +268,7 @@ tMobileSDK.call = function(opts) {
 
 }
 ```
-10、发短信
+### 10、发短信
 ```
 tMobileSDK.sendMessage = function(opts) {
 
@@ -286,7 +286,7 @@ tMobileSDK.sendMessage = function(opts) {
 
 }
 ```
-11、获取网络类型
+### 11、获取网络类型
 onSuccess返回值result为wifi, 2g, 3g, 4g, none, unknow
 ```
 tMobileSDK.getNetworkType = function(opts) {
@@ -301,7 +301,7 @@ tMobileSDK.getNetworkType = function(opts) {
 
 }
 ```
-12、选择图片
+### 12、选择图片
 ```
 tMobileSDK.chooseImage = function(opts) {
 
@@ -315,7 +315,7 @@ tMobileSDK.chooseImage = function(opts) {
 
 }
 ```
-13、选择文件
+### 13、选择文件
 ```
 tMobileSDK.selectFile = function(opts) {
 
@@ -329,7 +329,7 @@ tMobileSDK.selectFile = function(opts) {
 
 }
 ```
-14、MAC地址
+### 14、MAC地址
 ```
 tMobileSDK.getMacAddress = function(opts) {
 
@@ -342,7 +342,7 @@ tMobileSDK.getMacAddress = function(opts) {
 
 }
 ```
-15、地图
+### 15、地图
 ```
 tMobileSDK.getLocationByMap = function(opts) {
 
@@ -356,7 +356,7 @@ tMobileSDK.getLocationByMap = function(opts) {
 
 }
 ```
-16、图片预览
+### 16、图片预览
 ```
 tMobileSDK.previewImage = function(opts) {
 
@@ -382,7 +382,7 @@ tMobileSDK.previewImage = function(opts) {
 
 }
 ```
-17、文件预览
+### 17、文件预览
 ```
 tMobileSDK.previewFile = function(opts) {
 
@@ -399,7 +399,7 @@ tMobileSDK.previewFile = function(opts) {
 }
 ```
 
-18、设置客户端顶栏中间标题，此方法可以不直接调用，设置模块的顶栏见下方buildHeader方法 
+### 18、设置客户端顶栏中间标题，此方法可以不直接调用，设置模块的顶栏见下方buildHeader方法 
 ```
 tMobileSDK.setTitle = function(opts) {
 
@@ -415,7 +415,7 @@ tMobileSDK.setTitle = function(opts) {
 
 }
 ```
-19、设置客户端顶栏右侧按钮，此方法可以不直接调用，设置模块的顶栏见下方buildHeader方法 
+### 19、设置客户端顶栏右侧按钮，此方法可以不直接调用，设置模块的顶栏见下方buildHeader方法 
 ```
 tMobileSDK.setRight = function(opts) {
 
@@ -435,7 +435,7 @@ tMobileSDK.setRight = function(opts) {
 
 }
 ```
-20、动作列表
+### 20、动作列表
 ```
 tMobileSDK.actionSheet = function(opts) {
 
@@ -455,7 +455,7 @@ tMobileSDK.actionSheet = function(opts) {
 
 }
 ```
-21、设置客户端顶栏的左中右部分文字和对应的点击事件
+### 21、设置客户端顶栏的左中右部分文字和对应的点击事件
 ```
 //顶栏左中右对应的文字及事件
 var headerData= {
@@ -511,7 +511,7 @@ tMobileSDK.buildHeader = function(headerData) {
     })
 }
 ```
-22、设置点击按钮要执行的动作列表
+### 22、设置点击按钮要执行的动作列表
 ```
 //funcData动作列表对应的文字和回调函数
             [
@@ -544,7 +544,7 @@ tMobileSDK.buildFunc = function(funcData) {
 }
 ```
 
-23、增加授权地址，@param url 地址
+### 23、增加授权地址，@param url 地址
 ```
 tMobileSDK.addAuthCode = function(url){
 
