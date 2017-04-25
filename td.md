@@ -1,6 +1,6 @@
 # 通达td_sdk调用说明
 
-1、td_sdk使用步骤
+###1、td_sdk使用步骤
     
     1.0概述
     
@@ -140,14 +140,14 @@
         onSuccess接口调用成功时执行的回调函数
         onFail接口调用失败时执行的回调函数
 
-2、暴露的全局对象 tMobileSDK 
+###2、暴露的全局对象 tMobileSDK 
 ```
 
 tMobileSDK = window.tMobileSDK || {};
 
 ```
 
-3、确认弹窗
+###3、确认弹窗
 ```
 tMobileSDK.confirm = function(opts) {
 
