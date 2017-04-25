@@ -15,12 +15,13 @@
         
         
         /static/pack/mobile/js/client.js
-
+        
         /static/pack/mobile/js/common.js
         
         /static/pack/mobile/js/wx.js
         
         /static/pack/mobile/js/dd.js
+        
 
        打包文件与源文件的映射关系：
         
