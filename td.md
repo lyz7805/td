@@ -2,11 +2,82 @@
 
 1、td_sdk使用步骤
     
-    1.1引入js文件
+    1.0概述
+    
+        产品使用td_sdk的模块，同一套代码运行在四个客户端里，每个模块页面均包含 pda/header.php。
+        
+        头文件：
+        
+        header_dd.php,header_client.php,header_wx.php,header_common.php
         
-        /static/mobile/js/td.js
+        打包文件：
+        
+        /static/pack/mobile/js/client.js
+        
+        /static/pack/mobile/js/common.js
+        
+        /static/pack/mobile/js/wx.js
+        
+        /static/pack/mobile/js/dd.js
+        
+       打包文件与源文件的映射关系：
+        
+        "/static/pack/mobile/js/wx.js": [
+            "/static/mobile/js/zepto.min.js",
+            "/static/mobile/js/gmu/gmu.js",
+            "/static/mobile/js/gmu/list.js",
+            "/static/mobile/js/gmu/page.js",
+            "/static/mobile/js/frozen/frozen.js",
+            "/static/mobile/js/swiped/swiped.js",
+            "/static/mobile/js/routie.min.js",
+            "/static/mobile/js/sdk.js",
+            "/pda/js/jweixin-1.0.0.js",
+            "/static/mobile/js/sdk/wx_sdk.js"
+        ]
+        "/static/pack/mobile/js/dd.js": [
+            "/static/mobile/js/zepto.min.js",
+            "/static/mobile/js/gmu/gmu.js",
+            "/static/mobile/js/gmu/list.js",
+            "/static/mobile/js/gmu/page.js",
+            "/static/mobile/js/frozen/frozen.js",
+            "/static/mobile/js/swiped/swiped.js",
+            "/static/mobile/js/routie.min.js",
+            "/static/mobile/js/sdk.js",
+            "/static/mobile/js/sdk/dd_sdk.js"
+        ]
+        "/static/pack/mobile/js/common.js": [
+            "/static/mobile/js/zepto.min.js",
+            "/static/mobile/js/gmu/gmu.js",
+            "/static/mobile/js/gmu/list.js",
+            "/static/mobile/js/gmu/page.js",
+            "/static/mobile/js/frozen/frozen.js",
+            "/static/mobile/js/swiped/swiped.js",
+            "/static/mobile/js/routie.min.js",
+            "/static/mobile/js/sdk.js",
+            "/static/mobile/js/sdk/h5_sdk.js"
+        ]
+        "/static/pack/mobile/js/client.js": [
+            "/static/mobile/js/zepto.min.js",
+            "/static/mobile/js/gmu/gmu.js",
+            "/static/mobile/js/gmu/list.js",
+            "/static/mobile/js/gmu/page.js",
+            "/static/mobile/js/frozen/frozen.js",
+            "/static/mobile/js/swiped/swiped.js",
+            "/static/mobile/js/routie.min.js",
+            "/static/mobile/js/sdk.js",
+            "/static/mobile/js/sdk/client_sdk.js"
+        ]
+        
+        页面在不同平台下，引入对应的js文件，最终均提供一个全局对象tMobileSDK，对象tMobileSDK负责统一不同平台提供的功能接口，如上传图片，选人等等。例如选择附件功能，钉钉提供方法dd.selectFile，客户端提供方法td.selectFile，经tMobileSDK封装后，在业务代码中，研发人员仅需要使用tMobileSDK.selectFile即可，无须考虑代码在哪个客户端运行。
+       
+    1.1引入js文件
+        
+        以客户端为例：
+        
+        /static/mobile/js/td.js
         /static/pack/mobile/js/client.js
         
+        
     
     1.2通过ready处理成功验证
         
