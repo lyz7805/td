@@ -13,8 +13,9 @@
 
         打包文件：
         
-        /static/pack/mobile/js/client.js
         
+        /static/pack/mobile/js/client.js
+
         /static/pack/mobile/js/common.js
         
         /static/pack/mobile/js/wx.js
