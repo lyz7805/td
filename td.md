@@ -14,6 +14,7 @@
         tMobileSDK.ready = function(func){
             td.ready(func)
         };
+        
     1.3接口调用说明
         
         onSuccess接口调用成功时执行的回调函数
