@@ -13,8 +13,6 @@
 
         打包文件：
         
-        ```
-     
         /static/pack/mobile/js/client.js
         
         /static/pack/mobile/js/common.js
@@ -22,13 +20,9 @@
         /static/pack/mobile/js/wx.js
         
         /static/pack/mobile/js/dd.js
-        
-        ```
-        
+
        打包文件与源文件的映射关系：
         
-       ```
-       
         "/static/pack/mobile/js/wx.js": [
         
         
@@ -119,8 +113,6 @@
             "/static/mobile/js/sdk/client_sdk.js"
         
         ]
-        
-        ```
         
         页面在不同平台下，引入对应的js文件，最终均提供一个全局对象tMobileSDK，对象tMobileSDK负责统一不同平台提供的功能接口，如上传图片，选人等等。例如选择附件功能，钉钉提供方法dd.selectFile，客户端提供方法td.selectFile，经tMobileSDK封装后，在业务代码中，研发人员仅需要使用tMobileSDK.selectFile即可，无须考虑代码在哪个客户端运行。
         
