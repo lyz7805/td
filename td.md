@@ -6,39 +6,40 @@
 ###### 头文件：
         header_dd.php,header_client.php,header_wx.php,header_common.php
 ###### 打包文件：
-/static/pack/mobile/js/client.js
 
-/static/pack/mobile/js/common.js
+        /static/pack/mobile/js/client.js
 
-/static/pack/mobile/js/wx.js
+        /static/pack/mobile/js/common.js
 
-/static/pack/mobile/js/dd.js
+        /static/pack/mobile/js/wx.js
+
+        /static/pack/mobile/js/dd.js
 
 ###### 打包文件与源文件的映射关系：
 
-"/static/pack/mobile/js/wx.js": [
+        "/static/pack/mobile/js/wx.js": [
         
-        "/static/mobile/js/zepto.min.js",
+                "/static/mobile/js/zepto.min.js",
 
-        "/static/mobile/js/gmu/gmu.js",
+                "/static/mobile/js/gmu/gmu.js",
 
-        "/static/mobile/js/gmu/list.js",
+                "/static/mobile/js/gmu/list.js",
 
-        "/static/mobile/js/gmu/page.js",
+                "/static/mobile/js/gmu/page.js",
 
-        "/static/mobile/js/frozen/frozen.js",
+                "/static/mobile/js/frozen/frozen.js",
 
-        "/static/mobile/js/swiped/swiped.js",
+                "/static/mobile/js/swiped/swiped.js",
 
-        "/static/mobile/js/routie.min.js",
+                "/static/mobile/js/routie.min.js",
 
-        "/static/mobile/js/sdk.js",
+                "/static/mobile/js/sdk.js",
 
-        "/pda/js/jweixin-1.0.0.js",
-            
-        "/static/mobile/js/sdk/wx_sdk.js"
+                "/pda/js/jweixin-1.0.0.js",
+
+                "/static/mobile/js/sdk/wx_sdk.js"
        
-]
+        ]
        
        "/static/pack/mobile/js/dd.js": [
             
