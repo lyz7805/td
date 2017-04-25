@@ -76,32 +76,6 @@ tMobileSDK.getLocation = function(opts) {
 
 }
 ```
-图片预览
-```
-tMobileSDK.previewImage = function(opts) {
-
-    opts.urls.forEach(function(v, k){
-
-        opts.urls[k] = tMobileSDK.addAuthCode(v);
-
-    });
-
-    opts.current = tMobileSDK.addAuthCode(opts.current);
-
-    td.previewImage({
-
-        urls: opts.urls || [],//图片路径
-
-        current: opts.current || 0,//当前图片索引
-
-        onSuccess: opts.onSuccess,
-
-        onFail: opts.onFail
-
-    })
-
-}
-```
 
 开启其它的应用
 
@@ -120,22 +94,35 @@ tMobileSDK.launchApp = function(opts) {
 
 }
 ```
-文件预览
+选人
 ```
-tMobileSDK.previewFile = function(opts) {
+tMobileSDK.selectUser = function(opts) {
 
-    td.previewFile({
+    td.selectUser({
 
-        url: opts.url || '',//文件路径
+        onSuccess: opts.onSuccess,//返回值result是所选的用户信息： [ { uid:0, userName:'系统管理员' } ]
 
-        onSuccess: opts.onSuccess,
-
-        onFail: opts.onFail
+        onFail: opts.onFail// err 是错误信息
 
     })
 
 }
 ```
+选部门
+```
+tMobileSDK.selectDept = function(opts) {
+
+    td.selectDept({
+
+        onSuccess: opts.onSuccess,//返回值result是所选的部门信息： [ { deptid:0, deptName:'销售部门' } ]
+
+        onFail: opts.onFail// err 是错误信息
+
+    })
+
+}
+```
+
 打电话
 ```
 tMobileSDK.call = function(opts) {
@@ -213,20 +200,76 @@ tMobileSDK.selectFile = function(opts) {
 
 }
 ```
-选人
+MAC地址
 ```
-tMobileSDK.selectUser = function(opts) {
+tMobileSDK.getMacAddress = function(opts) {
 
-    td.selectUser({
+    td.getMacAddress({
 
-        onSuccess: opts.onSuccess,//返回值result是所选的用户信息： [ { uid:0, userName:'系统管理员' } ]
-
-        onFail: opts.onFail// err 是错误信息
+        onSuccess: opts.onSuccess,
+        onFail: opts.onFail
 
     })
 
 }
 ```
+地图
+```
+tMobileSDK.getLocationByMap = function(opts) {
+
+    td.getLocationByMap({
+
+        onSuccess: opts.onSuccess,
+
+        onFail: opts.onFail
+
+    })
+
+}
+```
+图片预览
+```
+tMobileSDK.previewImage = function(opts) {
+
+    opts.urls.forEach(function(v, k){
+
+        opts.urls[k] = tMobileSDK.addAuthCode(v);
+
+    });
+
+    opts.current = tMobileSDK.addAuthCode(opts.current);
+
+    td.previewImage({
+
+        urls: opts.urls || [],//图片路径
+
+        current: opts.current || 0,//当前图片索引
+
+        onSuccess: opts.onSuccess,
+
+        onFail: opts.onFail
+
+    })
+
+}
+```
+文件预览
+```
+tMobileSDK.previewFile = function(opts) {
+
+    td.previewFile({
+
+        url: opts.url || '',//文件路径
+
+        onSuccess: opts.onSuccess,
+
+        onFail: opts.onFail
+
+    })
+
+}
+```
+
 设置客户端顶栏中间标题，此方法可以不直接调用，设置模块的顶栏见下方buildHeader方法 
 ```
 tMobileSDK.setTitle = function(opts) {
