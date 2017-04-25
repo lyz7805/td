@@ -1,23 +1,26 @@
 # 通达移动客户端js调用方法
-首先，调用jssdk前，应在页面中引入/static/mobile/js/td.js，/static/pack/mobile/js/client.js
+1、td_sdk使用步骤
+    1.1引入js文件
+        /static/mobile/js/td.js
+        /static/pack/mobile/js/client.js
+    1.2通过ready处理成功验证
+        页面加载时调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行
+        ```
+        tMobileSDK.ready = function(func){
+            td.ready(func)
+        };
+        ```
+    1.3接口调用说明
+        onSuccess接口调用成功时执行的回调函数
+        onFail接口调用失败时执行的回调函数
 
-暴露的全局对象 tMobileSDK 
+2、暴露的全局对象 tMobileSDK 
 ```
 
 tMobileSDK = window.tMobileSDK || {};
 
 ```
 
-所有业务需要注册到 tMobileSDK.ready 的回调中去。
-```
-
-tMobileSDK.ready = function(func){
-
-    td.ready(func)
-
-};
-
-```
 确认弹窗
 ```
 tMobileSDK.confirm = function(opts) {
